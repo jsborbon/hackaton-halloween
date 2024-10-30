@@ -14,27 +14,31 @@
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Más oscuro */
+    padding: 40px; /* Más espacio interno */
     border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
+    width: 90%; /* Más ancha */
+    max-width: 800px; /* Aumentar tamaño máximo */
     margin: 20px auto;
+    position: relative; /* Para posicionar el botón dentro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .btnNextPage {
     background-color: #ff6347; 
     color: white; 
     border: none; 
-    padding: 10px 20px; 
+    padding: 15px 30px;
     border-radius: 5px; 
     cursor: pointer; 
-    font-size: 16px;
-    margin-top: 20px;
+    font-size: 18px;
+    margin-top: auto; 
     transition: background-color 0.3s;
 }
 
 .btnNextPage:hover {
     background-color: #ff4500;  
 }
-

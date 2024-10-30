@@ -28,6 +28,18 @@
   cursor: pointer;
 }
 
+.areaDeClic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px; /* Ajusta el tamaño según tus necesidades */
+  height: 100px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+}
+
 .ventanaEmergente {
   position: fixed;
   top: 50%;

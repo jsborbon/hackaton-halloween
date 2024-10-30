@@ -8,7 +8,7 @@ export default function Rules() {
   return (
     <div className={styles.imgFondo}>
       <div className={styles.caja}>
-        <h1>HOLAA 2 🎃!</h1>
+        <h3>Objetivo del Juego:</h3>
       </div>
 
       <div>
@@ -17,7 +17,7 @@ export default function Rules() {
           onClick={() => router.back()}
           className={styles.btnNextPage}
         >
-          IniciO 👻
+          Inicio 👻
         </button>
       </div>
     </div>

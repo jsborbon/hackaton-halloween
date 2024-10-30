@@ -1,6 +1,6 @@
 /* acertijo1.module.css */
 .caja {
-  background-image: url('/imgs/acertijo1-fondo.png'); /* Ruta de la imagen de fondo */
+  background-image: url('/imgs/acertijo1-fondo.jpg'); /* Ruta de la imagen de fondo */
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
