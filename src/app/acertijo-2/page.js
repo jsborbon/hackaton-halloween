@@ -6,7 +6,7 @@ import styles from "./acertijo2.module.css";
 export default function Acertijo2() {
   // Array de mensajes que se mostrarán secuencialmente
   const mensajes = [
-    "Primer mensaje...Primer mensaje...Primer mensaje...Primer mensaje...Primer mensaje...Primer mensaje...Primer mensaje...Primer mensaje...Primer mensaje...Primer mensaje...Primer mensaje...Primer mensaje...Primer mensaje...Primer mensaje...",
+    "Primer mensaje...",
     "Segundo mensaje...",
     "Tercer mensaje...",
     "Último mensaje...",
