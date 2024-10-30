@@ -8,7 +8,16 @@ export default function Rules() {
   return (
     <div className={styles.imgFondo}>
       <div className={styles.caja}>
-        <h1>HOLAA 2 🎃!</h1>
+        <h3>Objetivos del Juego:</h3>
+        <p>
+        Avanzar a través de seis habitaciones, 
+        resolviendo acertijos para alcanzar la libertad. 
+        Cada cuarto encierra un reto; resolverlo correctamente 
+        abre la puerta hacia el siguiente, mientras que un error 
+        puede retrasar o incluso detener tu progreso. 
+        
+        Piensa con cuidado: el juego pone a prueba tu ingenio y tu juicio.
+        </p>
       </div>
 
       <div>
