@@ -1,25 +1,23 @@
 "use client";
-import Image from "next/image";
-import Banner from "./components/Banner";
-import styles from "./index.module.css";
+import styles from "./rules.module.css";
 import { useRouter } from "next/navigation";
 
-export default function Home() {
+export default function Rules() {
   const router = useRouter();
 
   return (
     <div className={styles.imgFondo}>
       <div className={styles.caja}>
-        <h1>Bienvenido al Juego de los Seis Cuartos 🎃!</h1>
+        <h1>HOLAA 2 🎃!</h1>
       </div>
 
       <div>
         <button
           type="button"
-          onClick={() => router.push("/rules")}
+          onClick={() => router.back()}
           className={styles.btnNextPage}
         >
-          Iniciar Aventura 👻
+          IniciO 👻
         </button>
       </div>
     </div>

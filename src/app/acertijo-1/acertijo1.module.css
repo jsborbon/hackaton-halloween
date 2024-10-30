@@ -1,0 +1,50 @@
+/* acertijo1.module.css */
+.caja {
+  background-image: url('/imgs/acertijo1-fondo.png'); /* Ruta de la imagen de fondo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center; /* Centra el texto */
+}
+
+.inputs {
+  display: flex;
+  gap: 10px; /* Espacio entre los inputs */
+  margin: 20px 0; /* Margen arriba y abajo */
+}
+
+.input {
+  width: 50px; /* Ancho del input */
+  height: 50px; /* Alto del input */
+  text-align: center; /* Centra el texto en el input */
+  font-size: 24px; /* Tamaño de fuente */
+}
+
+.button {
+  margin-top: 20px; /* Margen arriba del botón */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  font-size: 16px; /* Tamaño de fuente del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.textoFlotante {
+  position: fixed;
+  bottom: 20px; /* Ubicación desde la parte inferior */
+  width: calc(100% - 40px); /* Espaciado para no tocar los bordes */
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
+  padding: 10px; /* Espaciado alrededor del texto */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.message {
+  margin-top: 20px; /* Margen arriba del mensaje */
+  color: yellow; /* Color del mensaje */
+}
