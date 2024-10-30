@@ -8,7 +8,7 @@ export default function Rules() {
   return (
     <div className={styles.imgFondo}>
       <div className={styles.caja}>
-        <h1>HOLAA 2 🎃!</h1>
+        <h3>Objetivos del Juego:</h3>
       </div>
 
       <div>
