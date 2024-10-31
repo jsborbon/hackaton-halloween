@@ -6,10 +6,11 @@ import { useRouter } from "next/navigation"; // Importar useRouter
 import styles from './contador.module.css'; // Asegúrate de importar tus estilos
 
 const Contador = () => {
-  const [tiempoRestante, setTiempoRestante] = useState(() => {
+  const [tiempoRestante, setTiempoRestante] = useState();
+  useEffect(() => {
     const tiempoGuardado = localStorage.getItem("tiempoRestante");
-    return tiempoGuardado ? JSON.parse(tiempoGuardado) : 8 * 60; // 8 minutos en segundos
-  });
+    setTiempoRestante(tiempoGuardado ? JSON.parse(tiempoGuardado) : 8 * 60); // 8 minutos en segundos
+  }, []);
 
   const [isActive, setIsActive] = useState(true);
   const router = useRouter(); // Inicializa el router
