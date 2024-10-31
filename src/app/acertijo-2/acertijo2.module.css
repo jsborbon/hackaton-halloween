@@ -54,6 +54,16 @@
   align-items: center;
 }
 
+.areaDeClic {
+  position: absolute;
+  top: 0; /* Posición en la parte superior */
+  left: 0; /* Posición en la parte izquierda */
+  width: 100%; /* Ocupa todo el ancho */
+  height: 100%; /* Ocupa toda la altura */
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para que sea visible */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el área */
+}
+
 .input {
   width: 50px;
   height: 50px;
