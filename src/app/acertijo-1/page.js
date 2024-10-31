@@ -18,6 +18,8 @@ export default function Acertijo1() {
   const [mostrarTexto, setMostrarTexto] = useState(true);
   // Estado para almacenar el mensaje de respuesta de la verificación de contraseña
   const [passwordMessage, setPasswordMessage] = useState("");
+  // Estado para controlar la visibilidad de los inputs
+  const [mostrarInputs, setMostrarInputs] = useState(false);
 
   // Función para verificar la contraseña ingresada
   const checkPassword = () => {
@@ -51,59 +53,38 @@ export default function Acertijo1() {
     });
   };
 
+  // Función para mostrar los inputs al hacer clic en el círculo azul
+  const toggleInputs = () => {
+    setMostrarInputs(true); // Muestra los inputs cuando se hace clic en el círculo
+  };
+
   return (
+    <>
+      <div className={styles.circuloAzul} onClick={toggleInputs}>
+        {/* Círculo azul que se puede hacer clic para mostrar los inputs */}
+      </div>
+      
     <div className={styles.caja}>
-      {" "}
-      {/* Contenedor principal del componente */}
-      {mostrarTexto && ( // Verifica si se debe mostrar el texto
+      {mostrarTexto && (
         <div className={styles.textoFlotante} onClick={manejarClick}>
-          {" "}
-          {/* Texto que se puede hacer clic */}
-          {mensajes[mensajeIndex]}{" "}
-          {/* Muestra el mensaje actual basado en el índice */}
+          {mensajes[mensajeIndex]}
         </div>
       )}
-      <div className={styles.inputs}>
-        {" "}
-        {/* Contenedor para los inputs */}
-        <input
-          className={styles.input} // Clase de estilos para el input
-          type="number" // Tipo de input numérico
-          id="input1" // ID del primer input
-          value="1" // Valor inicial del primer input
-          max="12" // Valor máximo
-          min="1" // Valor mínimo
-          maxLength="2" // Longitud máxima de caracteres
-        />
-        <input
-          className={styles.input} // Clase de estilos para el input
-          type="number" // Tipo de input numérico
-          id="input2" // ID del segundo input
-          value="1" // Valor inicial del segundo input
-          max="12" // Valor máximo
-          min="1" // Valor mínimo
-          maxLength="2" // Longitud máxima de caracteres
-        />
-        <input
-          className={styles.input} // Clase de estilos para el input
-          type="number" // Tipo de input numérico
-          id="input3" // ID del tercer input
-          value="1" // Valor inicial del tercer input
-          max="12" // Valor máximo
-          min="1" // Valor mínimo
-          maxLength="2" // Longitud máxima de caracteres
-        />
-      </div>
-      <button className={styles.button} onClick={checkPassword}>
-        {" "}
-        {/* Botón para enviar los inputs */}
-        Enviar
-      </button>
-      <p id="message" className={styles.message}>
-        {" "}
-        {/* Párrafo para mostrar el mensaje de la contraseña */}
-        {passwordMessage} {/* Muestra el mensaje de la contraseña */}
-      </p>
+      
+      {mostrarInputs && ( // Condicional para mostrar los inputs al hacer clic en el círculo
+        <>
+          <div className={styles.inputs}>
+            <input className={styles.input} type="number" id="input1" defaultValue="1" max="12" min="1" maxLength="2" />
+            <input className={styles.input} type="number" id="input2" defaultValue="1" max="12" min="1" maxLength="2" />
+            <input className={styles.input} type="number" id="input3" defaultValue="1" max="12" min="1" maxLength="2" />
+          </div>
+          <button className={styles.button} onClick={checkPassword}>Enviar</button>
+          <p id="message" className={styles.message}>
+            {passwordMessage}
+          </p>
+        </>
+      )}
     </div>
+    </>
   );
 }
