@@ -2,6 +2,8 @@
 "use client"; // Asegúrate de que este componente sea del lado del cliente
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation"; // Importar useRouter
+import styles from './contador.module.css'; // Asegúrate de importar tus estilos
 
 const Contador = () => {
   const [tiempoRestante, setTiempoRestante] = useState(() => {
@@ -10,6 +12,7 @@ const Contador = () => {
   });
 
   const [isActive, setIsActive] = useState(true);
+  const router = useRouter(); // Inicializa el router
 
   useEffect(() => {
     let intervalo;
@@ -25,10 +28,11 @@ const Contador = () => {
     } else if (tiempoRestante === 0) {
       setIsActive(false);
       localStorage.removeItem("tiempoRestante"); // Opcional: limpiar el tiempo al llegar a 0
+      router.push('/susto'); // Redirigir a la nueva página
     }
 
     return () => clearInterval(intervalo);
-  }, [isActive, tiempoRestante]);
+  }, [isActive, tiempoRestante, router]); // Asegúrate de incluir router en las dependencias
 
   const formatearTiempo = (segundos) => {
     const minutos = Math.floor(segundos / 60);
@@ -37,7 +41,7 @@ const Contador = () => {
   };
 
   return (
-    <div className="w-fit">
+    <div className={styles.contador}>
       <h2>Tiempo restante: {formatearTiempo(tiempoRestante)}</h2>
     </div>
   );
