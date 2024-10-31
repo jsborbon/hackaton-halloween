@@ -1,0 +1,12 @@
+/* app/Contador.module.css */
+.contador {
+    position: fixed; /* Mantiene el contador en una posición fija */
+    top: 20px; /* Espaciado desde la parte superior */
+    right: 20px; /* Espaciado desde la derecha */
+    background-color: rgba(239, 239, 239, 0.7); /* Fondo semi-transparente */
+    color: rgb(0, 0, 0); /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 1000; /* Asegúrate de que tenga un z-index alto para estar por encima de otros elementos */
+  }
+  
