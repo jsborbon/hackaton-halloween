@@ -93,7 +93,7 @@ export default function Acertijo2() {
 
       {/* Botón para avanzar al siguiente acertijo que aparece solo si mostrarBotonSiguiente es true */}
       {mostrarBotonSiguiente && (
-        <button className={styles.botonSiguiente} onClick={() => router.push("/acertijo-1")}>
+        <button className={styles.botonSiguiente} onClick={() => router.push("/acertijo-4")}>
           Siguiente Acertijo
         </button>
       )}
