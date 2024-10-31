@@ -41,6 +41,7 @@ export default function Acertijo4() {
       setMostrarBotonSiguiente(true); // Muestra el botón para avanzar
     } else {
       setRespuestaCorrecta(false); // Si la respuesta es incorrecta
+      router.push("/susto");
     }
   };
 
