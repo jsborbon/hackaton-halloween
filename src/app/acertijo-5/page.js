@@ -215,7 +215,7 @@ export default function Acertijo5() {
       {mostrarBotonSiguiente && (
         <button
           className={styles.botonSiguiente}
-          onClick={() => router.push("/acertijo-5")}
+          onClick={() => router.push("/acertijo-3")}
         >
           Siguiente Acertijo
         </button>

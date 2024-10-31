@@ -60,13 +60,11 @@ export default function Acertijo4() {
   return (
     <div className={styles.contenedor}>
       <div className={styles.caja}></div> {/* Fondo de pantalla */}
-
       {mostrarTexto && (
         <div className={styles.textoFlotante} onClick={manejarClick}>
           {mensajes[mensajeIndex]}
         </div>
       )}
-
       {/* Área de clic para abrir la ventana emergente */}
       {!ventanaCerrada && (
         <div
@@ -74,27 +72,34 @@ export default function Acertijo4() {
           onClick={abrirVentanaEmergente}
         ></div>
       )}
-
       {mostrarVentanaEmergente && (
         <div className={styles.ventanaEmergente}>
-          <p>Piensa con cuidado, porque solo una de ellas te permitirá avanzar. Si eliges la correcta, se abrirá la puerta a la siguiente prueba. Pero si te equivocas… bueno, tal vez prefieras no descubrirlo.</p>
-          <button onClick={cerrarVentanaEmergente}>Cerrar</button> {/* Botón para cerrar la ventana */}
+          <p>
+            Piensa con cuidado, porque solo una de ellas te permitirá avanzar.
+            Si eliges la correcta, se abrirá la puerta a la siguiente prueba.
+            Pero si te equivocas… bueno, tal vez prefieras no descubrirlo.
+          </p>
+          <button onClick={cerrarVentanaEmergente}>Cerrar</button>{" "}
+          {/* Botón para cerrar la ventana */}
         </div>
       )}
-
       {/* Botones de respuesta, se muestran después de cerrar la ventana emergente */}
       {mostrarBotonesRespuesta && (
         <div className={styles.botones}>
-          <button onClick={() => manejarRespuesta("oscuridad")}>Oscuridad</button>
+          <button onClick={() => manejarRespuesta("oscuridad")}>
+            Oscuridad
+          </button>
           <button onClick={() => manejarRespuesta("sombra")}>Sombra</button>
           <button onClick={() => manejarRespuesta("silencio")}>Silencio</button>
           <button onClick={() => manejarRespuesta("muerte")}>Muerte</button>
         </div>
       )}
-
       {/* Botón para avanzar al siguiente acertijo que aparece solo si mostrarBotonSiguiente es true */}
       {mostrarBotonSiguiente && (
-        <button className={styles.botonSiguiente} onClick={() => router.push("/acertijo-2")}>
+        <button
+          className={styles.botonSiguiente}
+          onClick={() => router.push("/acertijo-5")}
+        >
           Siguiente Acertijo
         </button>
       )}
