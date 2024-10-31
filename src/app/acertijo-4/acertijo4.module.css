@@ -47,6 +47,7 @@
 .ventanaEmergente button {
   margin-top: 10px;
   transition: color 0.3s ease, transform 0.2s ease;
+  color: white;
 }
 
 .ventanaEmergente button:hover {
