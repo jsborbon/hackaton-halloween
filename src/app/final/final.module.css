@@ -1,0 +1,36 @@
+/*@font-face {
+    font-family: 'NombreDeLaFuente';
+    src: url('/fonts/Butcherman-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  NS COMO IMPORTAR UNA NUEVA FUENTE, lo he intentado de muchas maneras
+  
+  */
+
+  .imgFondo{
+    background-image:url('/imgs/haunted-house.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.caja { 
+    font-family: 'Butcherman-Regular', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    font-weight: 800;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+
