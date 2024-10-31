@@ -9,6 +9,7 @@ export default function Rules() {
     <div className={styles.imgFondo}>
       <div className={styles.caja}>
         <h3>Objetivos del Juego:</h3>
+
         <p>
           Avanzar a través de seis habitaciones, 
           resolviendo acertijos para alcanzar la libertad. 
@@ -26,7 +27,6 @@ export default function Rules() {
         >
           Demasiado miedo, mejor me vuelvo 😱
         </button>
-
         <button
           type="button"
           onClick={() => router.back()}
