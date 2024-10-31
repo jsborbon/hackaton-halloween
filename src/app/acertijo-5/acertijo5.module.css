@@ -1,0 +1,163 @@
+.contenedor {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.caja {
+  background-image: url('/imgs/acertijo5-fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.textoFlotante {
+  position: fixed;
+  bottom: 20px;
+  width: calc(100% - 40px);
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.ventanaEmergente {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(23, 23, 23, 0.709);
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  text-align: center;
+}
+
+.ventanaEmergente button {
+  margin-top: 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.ventanaEmergente button:hover {
+  margin-top: 10px;
+  color: red;
+  text-decoration: underline;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.inputContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.areaDeClic {
+  position: absolute;
+  top: 20%; /* Posición en la parte superior */
+  left: 22.5%; /* Posición en la parte izquierda */
+  width: 50%; /* Ocupa todo el ancho */
+  height: 50%; /* Ocupa toda la altura */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el área */
+}
+
+.input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  color: #000;
+}
+
+.botonSiguiente {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(23, 23, 23, 0.709);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+
+.pianoDivContainer
+{
+    align-items: center;
+    display: flex;
+    overflow: auto;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.child1
+{
+    position: relative;
+    width: 100%;
+    flex: 1 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.child2
+{
+    position: relative;
+    height: 90px;
+    width: 100%;
+    /* border-top: 1px solid #ccc; */
+    display: flex;
+    flex-direction: column;
+}
+.child2 > div:nth-child(1)
+{
+    height: 30px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    display: inline-flex;
+}
+.child2 > div:nth-child(2)
+{
+    flex: 1 1;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+}
+
+.pianoContainer
+{
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    overflow: auto;
+    position: absolute;
+    bottom: 0;
+  }
+.roll
+{
+    height: 60%;width: 100%;overflow-y: scroll;overflow-x: scroll;flex: 1;
+    /* background-color: #191A19; */
+}

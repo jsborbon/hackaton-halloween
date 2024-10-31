@@ -1,0 +1,78 @@
+.octave {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-grow: 1;
+    position: relative;
+    max-width: 200px;
+}
+
+.blackNotes {
+    height: 55px;
+    display: flex;
+    width: auto;
+    left: 0;
+    right: 0;  
+    top: 1px;
+    position: absolute;
+}
+
+.whiteNotes {
+    height: 100%;
+    display: flex;
+}
+
+.whiteNotes > span {
+    width: auto;
+    height: 100%;
+    display: inline-block;
+    border-right: 1px solid #3a3a3a;
+    border-top: 1px solid #3a3a3a;
+    border-bottom: 1px solid #3a3a3a;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.whiteNotes > span[active]:nth-child(1) {
+    background-color: #3e2b2b; /* Dark red tone */
+}
+
+.whiteNotes > span[active]:nth-child(2), .blackNotes > span[active]:nth-child(2) {
+    background-color: #4f3a25; /* Muddy brown */
+}
+
+.whiteNotes > span[active]:nth-child(3), .blackNotes > span[active]:nth-child(3) {
+    background-color: #2f3d43; /* Desaturated dark teal */
+}
+
+.whiteNotes > span[active]:nth-child(4) {
+    background-color: #3b392c; /* Faded yellow-green */
+}
+
+.whiteNotes > span[active]:nth-child(5), .blackNotes > span[active]:nth-child(6) {
+    background-color: #1e2a1e; /* Dark greenish-brown */
+}
+
+.whiteNotes > span[active]:nth-child(6), .blackNotes > span[active]:nth-child(7) {
+    background-color: #3a1f3d; /* Murky purple */
+}
+
+.whiteNotes > span[active]:nth-child(7), .blackNotes > span[active]:nth-child(8) {
+    background-color: #4e2b33; /* Dark red-brown */
+}
+
+.blackNotes > span {
+    background-color: #1a1a1a; /* Dark black-gray */
+    border-right: 1px solid #3a3a3a;
+    cursor: pointer;
+    height: 100%;
+    display: inline-block;
+    flex-grow: 1;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.blackNotes > span:nth-child(1), .blackNotes > span:nth-child(4), .blackNotes > span:nth-child(5), .blackNotes > span:last-child {
+    visibility: hidden;
+}
