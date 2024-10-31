@@ -21,7 +21,7 @@ export default function Acertijo3() {
   };
   
   const handleClickDerecha = () => {
-    router.push("/acertijo-2");
+    router.push("/final");
   };
 
   const manejarClick = () => {
