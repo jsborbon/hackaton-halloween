@@ -28,7 +28,7 @@ export default function Acertijo4() {
     } else {
       setMostrarTexto(true); // Muestra el texto si hay mensajes restantes
     }
-  }, [mensajeIndex]); // Dependencia en mensajeIndex para actualizar cuando este cambie
+  }, [mensajeIndex, mensajes.length]); // Dependencia en mensajeIndex para actualizar cuando este cambie
 
   const manejarClick = () => {
     setMensajeIndex((prevIndex) => prevIndex + 1);
@@ -76,7 +76,7 @@ export default function Acertijo4() {
 
       {mostrarVentanaEmergente && (
         <div className={styles.ventanaEmergente}>
-          <p>"El tiempo está cifrado en el lenguaje de los antiguos; desentraña el símbolo del amanecer para avanzar."</p>
+          <p>Piensa con cuidado, porque solo una de ellas te permitirá avanzar. Si eliges la correcta, se abrirá la puerta a la siguiente prueba. Pero si te equivocas… bueno, tal vez prefieras no descubrirlo.</p>
           <button onClick={cerrarVentanaEmergente}>Cerrar</button> {/* Botón para cerrar la ventana */}
         </div>
       )}
