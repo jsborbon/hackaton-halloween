@@ -10,6 +10,7 @@
   width: 100vw;
   height: 100vh;
   text-align: center; /* Centra el texto */
+  position: relative; /* Asegúrate de que .caja tenga posición relativa */
 }
 
 .inputs {
@@ -47,4 +48,17 @@
 .message {
   margin-top: 20px; /* Margen arriba del mensaje */
   color: yellow; /* Color del mensaje */
+}
+
+.circuloAzul {
+  width: 100px; /* Ancho del círculo */
+  height: 120px; /* Altura del círculo */
+  background-color: blue; /* Color de fondo azul */
+  border-radius: 50%; /* Hace que sea un círculo */
+  position: absolute; /* Para que flote sobre el contenedor */
+  top: 19vh; /* Ajusta según necesites, por ejemplo, 20px desde la parte inferior */
+  left: 16vw; /* Ajusta según necesites, por ejemplo, 20px desde la parte izquierda */
+  margin: 0; /* Asegúrate de que no haya márgenes adicionales */
+  cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+  z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
 }
