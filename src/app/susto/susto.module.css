@@ -1,0 +1,12 @@
+.container {
+    background-image: url('/imgs/susto.gif'); /* Reemplaza con la ruta de tu GIF */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    height: 100vh; /* Altura completa de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Cambia el color del texto según lo necesites */
+    text-align: center;
+  }
+  
