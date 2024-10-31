@@ -1,15 +1,21 @@
 "use client"; // Asegúrate de incluir esta línea para habilitar la renderización del lado del cliente en Next.js
 
 import { useState } from "react"; // Importa el hook useState de React para manejar el estado
+import { useRouter } from "next/navigation"; // Importa useRouter para la navegación
 import styles from "./acertijo1.module.css"; // Importa los estilos del archivo CSS correspondiente
 
 export default function Acertijo1() {
+  const router = useRouter(); // Inicializa el router para la navegación
+
   // Array que contiene los mensajes a mostrar en orden
   const mensajes = [
-    "Primer mensaje...",
-    "Segundo mensaje...",
-    "Tercer mensaje...",
-    "Último mensaje...",
+    "Has llegado a la primera habitación...",
+    "Te persigue un asesino...",
+    "Tienes 8 min para recorrer la casa y salir...",
+    "Ahora mismo estás encerrado, la única salida está cerrada con candado y no sabes el código",
+    "El asesino está justo detrás tuyo...",
+    "Te recomiendo empezar a buscar pistas, se te acaba el tiempo...",
+    "Sientes que algo en la habitación intenta llamar tu atención...",
   ];
 
   // Estado para llevar el índice del mensaje actual
@@ -18,6 +24,8 @@ export default function Acertijo1() {
   const [mostrarTexto, setMostrarTexto] = useState(true);
   // Estado para almacenar el mensaje de respuesta de la verificación de contraseña
   const [passwordMessage, setPasswordMessage] = useState("");
+  // Estado para controlar la visibilidad de los inputs
+  const [mostrarInputs, setMostrarInputs] = useState(false);
 
   // Función para verificar la contraseña ingresada
   const checkPassword = () => {
@@ -27,12 +35,12 @@ export default function Acertijo1() {
     const input3 = document.getElementById("input3").value;
 
     // Compara los valores ingresados con la contraseña correcta
-    if (input1 === "7" && input2 === "4" && input3 === "5") {
-      // Si es correcta, actualiza el mensaje de contraseña
-      setPasswordMessage("¡Enhorabuena!");
+    if (input1 === "6" && input2 === "4" && input3 === "5") {
+      // Si es correcta, redirige a la pantalla de acertijo-2
+      router.push('/acertijo-2'); // Cambia a la ruta de la pantalla de acertijo-2
     } else {
-      // Si es incorrecta, muestra un mensaje de error
-      setPasswordMessage("Inténtalo de nuevo.");
+      // Si es incorrecta, redirige a la pantalla de susto
+      router.push('/susto'); // Cambia a la ruta de la pantalla de susto
     }
   };
 
@@ -51,59 +59,40 @@ export default function Acertijo1() {
     });
   };
 
+  // Función para mostrar los inputs al hacer clic en el círculo azul
+  const toggleInputs = () => {
+    setMostrarInputs(true); // Muestra los inputs cuando se hace clic en el círculo
+  };
+
   return (
-    <div className={styles.caja}>
-      {" "}
-      {/* Contenedor principal del componente */}
-      {mostrarTexto && ( // Verifica si se debe mostrar el texto
-        <div className={styles.textoFlotante} onClick={manejarClick}>
-          {" "}
-          {/* Texto que se puede hacer clic */}
-          {mensajes[mensajeIndex]}{" "}
-          {/* Muestra el mensaje actual basado en el índice */}
-        </div>
-      )}
-      <div className={styles.inputs}>
-        {" "}
-        {/* Contenedor para los inputs */}
-        <input
-          className={styles.input} // Clase de estilos para el input
-          type="number" // Tipo de input numérico
-          id="input1" // ID del primer input
-          value="1" // Valor inicial del primer input
-          max="12" // Valor máximo
-          min="1" // Valor mínimo
-          maxLength="2" // Longitud máxima de caracteres
-        />
-        <input
-          className={styles.input} // Clase de estilos para el input
-          type="number" // Tipo de input numérico
-          id="input2" // ID del segundo input
-          value="1" // Valor inicial del segundo input
-          max="12" // Valor máximo
-          min="1" // Valor mínimo
-          maxLength="2" // Longitud máxima de caracteres
-        />
-        <input
-          className={styles.input} // Clase de estilos para el input
-          type="number" // Tipo de input numérico
-          id="input3" // ID del tercer input
-          value="1" // Valor inicial del tercer input
-          max="12" // Valor máximo
-          min="1" // Valor mínimo
-          maxLength="2" // Longitud máxima de caracteres
-        />
+    <>
+      <div className={styles.circuloAzul} onClick={toggleInputs}>
+        {/* Círculo azul que se puede hacer clic para mostrar los inputs */}
       </div>
-      <button className={styles.button} onClick={checkPassword}>
-        {" "}
-        {/* Botón para enviar los inputs */}
-        Enviar
-      </button>
-      <p id="message" className={styles.message}>
-        {" "}
-        {/* Párrafo para mostrar el mensaje de la contraseña */}
-        {passwordMessage} {/* Muestra el mensaje de la contraseña */}
-      </p>
-    </div>
+      
+      <div className={styles.caja}>
+        {mostrarTexto && (
+          <div className={styles.textoFlotante} onClick={manejarClick}>
+            {mensajes[mensajeIndex]}
+          </div>
+        )}
+        
+        {mostrarInputs && ( // Condicional para mostrar los inputs al hacer clic en el círculo
+          <>
+            <div className={styles.mensajePista}> UN CUARTO PARA LLEGAR</div>
+            <img src="/imgs/relojGrande.png" alt="Reloj de Acertijo" className={styles.imagenReloj} />
+            <div className={styles.inputs}>
+              <input className={styles.input} type="number" id="input1" defaultValue="1" max="12" min="1" maxLength="2" />
+              <input className={styles.input} type="number" id="input2" defaultValue="1" max="12" min="1" maxLength="2" />
+              <input className={styles.input} type="number" id="input3" defaultValue="1" max="12" min="1" maxLength="2" />
+            </div>
+            <button className={styles.button} onClick={checkPassword}>Enviar</button>
+            <p id="message" className={styles.message}>
+              {passwordMessage}
+            </p>
+          </>
+        )}
+      </div>
+    </>
   );
 }

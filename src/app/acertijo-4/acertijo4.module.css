@@ -1,0 +1,100 @@
+.contenedor {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.caja {
+  background-image: url('/imgs/acertijo4-pared.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.textoFlotante {
+  position: fixed;
+  bottom: 20px;
+  width: calc(100% - 40px);
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.ventanaEmergente {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(23, 23, 23, 0.709);
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  text-align: center;
+}
+
+.ventanaEmergente button {
+  margin-top: 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.ventanaEmergente button:hover {
+  color: red;
+  text-decoration: underline;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.centroDeClic {
+    position: absolute; /* Para posicionar el área de clic */
+    top: 50%; /* Posicionar verticalmente en el medio */
+    left: 50%; /* Posicionar horizontalmente en el medio */
+    width: 50%; /* Ajustar el tamaño según necesites */
+    height: 50%; /* Ajustar el tamaño según necesites */
+    transform: translate(-50%, -50%); /* Centra el área de clic */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el área */
+    z-index: 1; /* Asegúrate de que esté por encima de otros elementos */
+  }
+  
+
+  .botones {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Centra los botones verticalmente */
+    flex-direction: column; /* Organiza los botones en una columna */
+    gap: 10px; /* Espacio entre botones */
+    position: absolute; /* Para posicionar en el centro */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Aplica la traducción para centrar */
+  }
+  
+
+  .botonSiguiente {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(23, 23, 23, 0.709);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Para posicionar el botón en el centro */
+    top: 60%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Aplica la traducción para centrar */
+    z-index: 101; /* Asegúrate de que esté por encima de otros elementos */
+    margin-top: 20px; /* Espacio adicional entre botones */
+  }
+  
+  .botonSiguiente:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Cambia el color al pasar el mouse */
+  }
+  
+
+
