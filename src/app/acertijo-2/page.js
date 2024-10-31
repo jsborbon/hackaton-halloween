@@ -38,9 +38,15 @@ export default function Acertijo2() {
     const valor = e.target.value;
     if (/^[0-9]?$/.test(valor)) { // Verifica que el valor sea un dígito único
       setInputValue(valor); // Actualiza el estado con el valor ingresado
-      setMostrarBotonSiguiente(valor === "1"); // Muestra el botón solo si el valor es "1"
+  
+      if (valor !== "1") { // Redirige si el valor es distinto de "1"
+        router.push("/susto");
+      } else {
+        setMostrarBotonSiguiente(true); // Muestra el botón si el valor es "1"
+      }
     }
   };
+  
 
   const abrirVentanaEmergente = () => {
     if (!ventanaCerrada) {
