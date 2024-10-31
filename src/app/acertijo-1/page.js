@@ -6,10 +6,13 @@ import styles from "./acertijo1.module.css"; // Importa los estilos del archivo 
 export default function Acertijo1() {
   // Array que contiene los mensajes a mostrar en orden
   const mensajes = [
-    "Primer mensaje...",
-    "Segundo mensaje...",
-    "Tercer mensaje...",
-    "Último mensaje...",
+    "Has llegado a la primera habitación...",
+    "Te persigue un asesino...",
+    "Tienes 8 min para recorrer la casa y salir...",
+    "Ahora mismo estás encerrado, la única salida está carrada con candado y no sabes el código",
+    "El asesino está justo detrás tuyo...",
+    "Te recomiendo empezar a buscar pistas, se te acaba el tiempo...",
+    "Sientes que algo en la habitación intenta llamar tu atención...",
   ];
 
   // Estado para llevar el índice del mensaje actual
@@ -73,6 +76,8 @@ export default function Acertijo1() {
       
       {mostrarInputs && ( // Condicional para mostrar los inputs al hacer clic en el círculo
         <>
+        <div className={styles.mensajePista}> UN CUARTO PARA LLEGAR</div>
+        <img src="/imgs/relojGrande.png" alt="Reloj de Acertijo" className={styles.imagenReloj} />
           <div className={styles.inputs}>
             <input className={styles.input} type="number" id="input1" defaultValue="1" max="12" min="1" maxLength="2" />
             <input className={styles.input} type="number" id="input2" defaultValue="1" max="12" min="1" maxLength="2" />
