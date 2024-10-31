@@ -27,7 +27,7 @@ export default function Acertijo2() {
     } else {
       setMostrarTexto(true); // Muestra el texto si hay mensajes restantes
     }
-  }, [mensajeIndex]); // Dependencia en mensajeIndex para actualizar cuando este cambie
+  }, [mensajeIndex, mensajes.length]); // Dependencia en mensajeIndex para actualizar cuando este cambie
 
   const manejarClick = () => {
     setMensajeIndex((prevIndex) => prevIndex + 1);
@@ -73,7 +73,7 @@ export default function Acertijo2() {
 
       {mostrarVentanaEmergente && (
         <div className={styles.ventanaEmergente}>
-          <p>"El tiempo está cifrado en el lenguaje de los antiguos; desentraña el símbolo del amanecer para avanzar."</p>
+          <p>El tiempo está cifrado en el lenguaje de los antiguos; desentraña el símbolo del amanecer para avanzar.</p>
           <button onClick={cerrarVentanaEmergente}>Cerrar</button> {/* Botón para cerrar la ventana */}
         </div>
       )}
@@ -93,7 +93,7 @@ export default function Acertijo2() {
 
       {/* Botón para avanzar al siguiente acertijo que aparece solo si mostrarBotonSiguiente es true */}
       {mostrarBotonSiguiente && (
-        <button className={styles.botonSiguiente} onClick={() => router.push("/acertijo-1")}>
+        <button className={styles.botonSiguiente} onClick={() => router.push("/acertijo-4")}>
           Siguiente Acertijo
         </button>
       )}

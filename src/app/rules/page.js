@@ -29,7 +29,7 @@ export default function Rules() {
         </button>
         <button
           type="button"
-          onClick={() => router.back()}
+          onClick={() => router.push("/acertijo-1")}
           className={styles.btnNextPage}
         >
           Continuamos.. ➡️
