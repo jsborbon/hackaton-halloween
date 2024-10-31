@@ -1,23 +1,47 @@
 .fondoPuertas {
+    position: relative; /* Permite que el texto se posicione sobre las puertas */
     display: flex;
     height: 100vh;
     width: 100%;
   }
-
+  
   .puertaIzquierda,
-  .puertaDerecha{
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    font-weight: 600;
+  .puertaDerecha {
+    flex: 1; /* Cada puerta ocupa la misma cantidad de espacio */
+    background-size: cover; /* Cubre el área completamente */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    color: white; /* Color del texto */
+    font-weight: 600; /* Peso del texto */
   }
-
-
-  .puertaIzquierda{
-    background-image: url('/imgs/puerta1.jpg');
+  
+  .puertaIzquierda {
+    background-image: url('/imgs/puerta1.jpg'); /* Imagen de la puerta izquierda */
   }
-  .puertaDerecha{
-    background-image: url('/imgs/puerta2.jpg');
+  
+  .puertaDerecha {
+    background-image: url('/imgs/puerta2.jpg'); /* Imagen de la puerta derecha */
   }
+  
+  /* Elimina los estilos de hover */
+  .puertaIzquierda:hover, 
+  .puertaDerecha:hover {
+    transform: none; /* No se aplica transformación */
+  }
+  
+  /* Estilos para el texto flotante */
+  .textoFlotante {
+    position: absolute; /* Posiciona el texto sobre las puertas */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta el texto para centrarlo */
+    width: calc(100% - 40px); /* Ancho total menos márgenes */
+    text-align: center; /* Alineación del texto */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    color: white; /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cursor tipo puntero al pasar sobre el texto */
+    z-index: 10; /* Para asegurar que esté por encima de otros elementos */
+  }
+  
