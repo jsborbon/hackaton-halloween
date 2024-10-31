@@ -33,7 +33,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: rgba(23, 23, 23, 0.709);
   padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 100;
@@ -42,6 +42,14 @@
 
 .ventanaEmergente button {
   margin-top: 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.ventanaEmergente button:hover {
+  margin-top: 10px;
+  color: red;
+  text-decoration: underline;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .inputContainer {
@@ -56,11 +64,10 @@
 
 .areaDeClic {
   position: absolute;
-  top: 0; /* Posición en la parte superior */
-  left: 0; /* Posición en la parte izquierda */
-  width: 100%; /* Ocupa todo el ancho */
-  height: 100%; /* Ocupa toda la altura */
-  background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para que sea visible */
+  top: 20%; /* Posición en la parte superior */
+  left: 22.5%; /* Posición en la parte izquierda */
+  width: 50%; /* Ocupa todo el ancho */
+  height: 50%; /* Ocupa toda la altura */
   cursor: pointer; /* Cambia el cursor al pasar sobre el área */
 }
 
@@ -72,4 +79,19 @@
   border: 2px solid #000;
   border-radius: 8px;
   color: #000;
+}
+
+.botonSiguiente {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(23, 23, 23, 0.709);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 101;
 }
